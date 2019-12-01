@@ -570,6 +570,10 @@ footer p {
   font-size: 1rem;
 }
 
+.footer-column-job-alerts {
+  width: 47rem;
+}
+
 .footer-column-job-alerts p {
   font-weight: 400;
   line-height: 1.4rem;

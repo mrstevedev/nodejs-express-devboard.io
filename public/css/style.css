@@ -285,7 +285,8 @@ input[type="search"] {
 .hero {
   height: 500px;
   width: 100%;
-  background: url("../img/remote-bg.jpg") no-repeat center -1120px;
+  background: url("../img/remote-bg.jpg") no-repeat center -1100px;
+  /* background: url("../img/remote-bg.jpg") no-repeat -231px -291px; */
   background-size: cover;
   display: flex;
   justify-content: flex-end;

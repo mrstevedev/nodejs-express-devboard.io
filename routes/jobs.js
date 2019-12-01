@@ -59,16 +59,16 @@ router.post("/add", (req, res) => {
     });
   } else {
     // Insert Into Table
-    // Job.create({
-    //     title,
-    //     technologies,
-    //     budget,
-    //     company,
-    //     description,
-    //     contact_email
-    // })
-    // .then(job => res.redirect('/jobs'))
-    // .catch(err => console.log(err))
+    Job.create({
+        title,
+        technologies,
+        budget,
+        company,
+        description,
+        contact_email
+    })
+    .then(job => res.redirect('/jobs'))
+    .catch(err => console.log(err))
   }
 
   // res.redirect('/login');

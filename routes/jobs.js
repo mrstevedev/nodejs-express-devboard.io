@@ -58,6 +58,9 @@ router.post("/add", (req, res) => {
       contact_email
     });
   } else {
+
+    technologies = technologies.toLowerCase().replace(/, /g, ',');
+    
     // Insert Into Table
     Job.create({
         title,

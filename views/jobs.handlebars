@@ -1,0 +1,36 @@
+<section id="jobs">
+    <div class="filter-search">
+        <h1>Featured Jobs</h1>
+        <form>
+            <input class="search-field" type="text" name="search"
+                placeholder="Enter Job Title or Keywords [ex. Front End Developer]">
+        </form>
+    </div>
+    {{#each jobs}}
+    <div class="job" data-aos="fade-in" data-aos-delay="250">
+        <div class="company-logo">
+            <img src="/img/mindera.png" class="company-logo-img" alt="Mindera - Front-End Web Developer" />
+        </div>
+        <div class="job-content-right">
+            <h3><a class="job-content-title" href="/">{{ title }}</a></h3>
+            {{!-- <p>{{ description }}</p> --}}
+            {{!-- <ul>
+                {{!-- <li>Budget: {{ budget }}</li> --}}
+            {{!-- <li><a href="/job/:id" class="btn btn-reverse">View Job</a></li> --}}
+            {{!-- </ul> --}}
+            <div class="description-text">
+                <small><i class="fas fa-building"></i> <span class="description-text-item">{{ company }} </span> <i
+                        class="fas fa-clock"></i> <span class="description-text-item">Posted {{ createdAt }}</span> <i
+                        class="fas fa-tag"></i> <span class="description-text-item"> {{{ technologies }}}</span></small>
+            </div>
+
+        </div>
+            <div class="job-content-right-btn">
+                <a href="/jobs/:id" class="btn">View Job</a>
+            </div>
+    </div>
+    {{ else }}
+    <p>No Jobs Available. Please check back later.</p>
+    {{/each}}
+    </div>
+</section>

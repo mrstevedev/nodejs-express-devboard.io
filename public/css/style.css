@@ -427,11 +427,6 @@ input[type="search"] {
   opacity: 1;
 }
 
-.form-group button[type="submit"] {
-  background: #568c9b;
-  color: #fff;
-}
-
 .fas.fa-long-arrow-alt-right {
   opacity: 0;
   transition: 0.22s ease-in-out;

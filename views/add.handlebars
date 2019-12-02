@@ -9,9 +9,9 @@
         <form action="/jobs/add" method="POST">
             <label for="jobtitle">Job Title <input type="text" id="title" name="title" placeholder="[ex. Front-End Developer, Senior Full Stack Developer]" value="{{title}}"></label>
             <label for="company">Company <input type="text" id="company" name="company" placeholder="[ex. Mindera]" value="{{company}}"></label>
-            <label for="description">Job Description <input type="text" id="description" name="description" placeholder="[ex. ]" value={{ description }}></label>
+            <label for="description">Job Description <textarea id="description" name="description" placeholder="[Add Description]" value={{ description }}></textarea></label>
+            <label for="about">About Employer <textarea id="about_company" name="about_company" placeholder="[Add About Employer]">{{ about_company }}</textarea>
             <label for="company_logo">Company Logo <input type="file" id="company_logo" name="company_logo"></label>
-            <label for="about">About Employer <textarea>[ex. Here at Mindera, we are continuously developing a fantastic team, and would love it for you to join us. As a Frontend Software Developer, you will be responsible for building fluid and responsive user interfaces for multiple platforms and devices. We are looking for junior and experienced Developers with an appetite for solving complex problems and building seamless user interactions to world-class standards. Expected travelling time (UK, Porto, and USA):: 0%-15%, varies according to project/client.]</textarea>
             <button type="submit">Submit</button>
         </form>
     </div>

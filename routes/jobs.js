@@ -33,19 +33,22 @@ router.post("/add", (req, res) => {
     title,
     company,
     description,
-    contact_email
+    about_company
   } = req.body;
   let errors = [];
 
   // Validate fields
   if (!title) {
-    errors.push({ text: "Please add a title" });
+    errors.push({ text: "Please add a job title" });
   }
   if (!company) {
     errors.push({ text: "Please add a company name" });
   }
   if (!description) {
-    errors.push({ text: "Please add a description" });
+    errors.push({ text: "Please add a job description" });
+  }
+  if (!about_company) {
+    errors.push({ text: "Please add an employer description" });
   }
 
   // Check for errors
@@ -55,7 +58,8 @@ router.post("/add", (req, res) => {
       title,
       company,
       description,
-      contact_email
+      about_company,
+      path: 'add'
     });
   } else {
 
@@ -68,7 +72,7 @@ router.post("/add", (req, res) => {
         budget,
         company,
         description,
-        contact_email
+        about_company
     })
     .then(job => res.redirect('/jobs'))
     .catch(err => console.log(err))

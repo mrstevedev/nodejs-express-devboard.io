@@ -28,7 +28,7 @@ a {
   text-decoration: none;
   position: relative;
   font-weight: bold;
-  transition: .20s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 a:hover {
@@ -239,8 +239,8 @@ input[type="search"] {
 }
 
 .job:hover .job-content-right-btn .btn {
-  background:#568c9b;
-  color:#fff;
+  background: #568c9b;
+  color: #fff;
 }
 
 .job ul {
@@ -344,7 +344,7 @@ input[type="search"] {
 }
 
 .back-to-top-btn i {
-  transition: .22s ease-in-out;
+  transition: 0.22s ease-in-out;
 }
 
 .back-to-top-btn:hover {
@@ -385,7 +385,7 @@ input[type="search"] {
   transition: 0.22s ease;
 }
 
-.form-group p:not('.error') {
+.form-group p:not(".error") {
   font-size: 1.1rem;
   color: #717171;
   line-height: 1.4;
@@ -492,6 +492,23 @@ label {
   outline: none;
 }
 
+/* About */
+.about-content {
+  padding: 4rem;
+  width: 54rem;
+  margin: 6rem auto;
+}
+
+.about-content h4 {
+  font-size: 2rem;
+  margin: .5rem 0;
+}
+.about-content p {
+  font-size: 1.3rem;
+  line-height: 35px;
+  margin: 0;
+}
+
 /* Footer */
 
 footer {
@@ -534,7 +551,7 @@ footer {
   right: 0;
   bottom: 15px;
   text-align: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 footer h2 {
@@ -616,7 +633,7 @@ input[type="checkbox"] + label {
 }
 
 input[type="checkbox"] + label:before {
-  content: '';
+  content: "";
   display: block;
   width: 17px;
   height: 17px;
@@ -624,9 +641,9 @@ input[type="checkbox"] + label:before {
   position: absolute;
   left: 0;
   top: 0;
-  opacity: .6;
-  -webkit-transition: all .12s, border-color .08s;
-  transition: all .12s, border-color .08s;
+  opacity: 0.6;
+  -webkit-transition: all 0.12s, border-color 0.08s;
+  transition: all 0.12s, border-color 0.08s;
 }
 
 input[type="checkbox"]:checked + label:before {

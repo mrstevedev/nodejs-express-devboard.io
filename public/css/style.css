@@ -83,11 +83,13 @@ header nav li {
   margin: 0 1rem;
 }
 
-.active::after {
+#jobs .jobs::after,
+#about .about::after,
+#remote .remote::after,
+#add .add::after {
   background: var(--primary-color);
   height: 4px;
   width: 4px;
-  /* width: 45px; */
   content: "";
   display: block;
   border-radius: 100%;
@@ -501,7 +503,7 @@ label {
 
 .about-content h4 {
   font-size: 2rem;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 .about-content p {
   font-size: 1.3rem;

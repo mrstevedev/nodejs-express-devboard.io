@@ -69,11 +69,16 @@ router.post("/add", (req, res) => {
 
 // Get route and view for specific job clicked
 router.get("/:id/:title", (req, res) => {
-  let { id, title } = req.params;
-  Job.findOne()
+  const { id, title } = req.params;
+  Job.findOne({
+    where: {
+      id: id
+    }
+  })
     .then((job) => {
-      console.log(id===job.id);
-      res.render("job", { id, title, path: "job" });
+      const company = job.company;
+      const description = job.description
+      res.render("job", { id, title, company, description, path: "job" });
     });
 });
 

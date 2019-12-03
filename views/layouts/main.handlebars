@@ -35,28 +35,9 @@
       <div class="modal-form"></div>
     </div>
   </div> --}}
-  <div class="hero" data-aos="fade" data-aos-delay="850">
-    <div class="hero-text-container" data-aos="fade-in" data-aos-delay="1450">
-      <p><em>Search</em> for a career that <span class="hero-text-fit"><em>fits you.</em></span> <br /><br />
-        Search by city, state, country,
-        remote or commute <span class="hero-text-fit"><em>software development</em></span> jobs.</p>
-
-      <p data-aos="fade-left" data-aos-delay="2450"><em>Let's get you working<span data-aos="fade-in"
-            data-aos-delay="3000">.</span></em></p>
-
-      <span>
-        <h2 style="color: #fff">DevBoard.io
-          <span>Let's get you working.</span>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-linkedin-in"></i>
-          <i class="fas fa-rss"></i>
-      </span>
-
-
-      </h2>
-    </div>
-  </div>
+  {{#if jobs}}
+    {{> hero-full }}
+  {{/if}}
   <div class>
     {{!-- Output any views --}}
     {{{ body }}}
@@ -124,7 +105,7 @@
       const sendEmailAddress = document.querySelector('.send-email-address');
       const emailAddress = document.querySelector('.email');
       sendEmailAddress.addEventListener('click', (e) => {
-              e.preventDefault();
+        e.preventDefault();
 
       })
 
@@ -149,7 +130,7 @@
       //if cookie hasn't been set...
       if (document.cookie.indexOf('CookieNotificationShown') < 0) {
 
-         // Display block / show modal
+        // Display block / show modal
         cookiesNotification.style.display = 'block';
 
         cookiesAcceptBtn.addEventListener('click', () => {

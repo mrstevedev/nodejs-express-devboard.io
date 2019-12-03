@@ -295,6 +295,17 @@ input[type="search"] {
   align-items: center;
 }
 
+.hero-short {
+  height: 250px;
+  width: 100%;
+  /* background: url("../img/remote-bg.jpg") no-repeat center -1230px; */
+  background: url("../img/remote-bg.jpg") no-repeat center -1345px;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .hero-text-container {
   width: 50rem;
   height: 100%;

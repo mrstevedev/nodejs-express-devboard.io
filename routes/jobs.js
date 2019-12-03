@@ -17,12 +17,6 @@ router.get("/remote", (req, res) => {
   res.render("remote", { path: "remote" });
 });
 
-// get job id
-// router.get('/:id', (req, res) => {
-//     const id = req.params.id;
-//     res.sendFile(path.join(__dirname+'/articleDetail.html'));
-// });
-
 // Display Post Job Form
 router.get("/add", (req, res) => res.render("add", { path: "add" }));
 
@@ -71,23 +65,16 @@ router.post("/add", (req, res) => {
       .then(job => res.redirect("/jobs"))
       .catch(err => console.log(err));
   }
-
-  // res.redirect('/login');
-
-  // const data = {
-  //     title: 'Front-End Developer',
-  //     technologies: '<span class="tag">wordpress</span> <span class="tag">html</span> <span class="tag">css</span> <span class="tag">reactjs</span>',
-  //     budget: '$3000',
-  //     company: '1Point21 Interactive',
-  //     description: 'Pellentesque in ipsum id orci porta dapibus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Sed porttitor lectus nibh.',
-  //     contact_email: 'user2@gmail.com'
-  // }
 });
 
 // Get route and view for specific job clicked
 router.get("/:id/:title", (req, res) => {
   let { id, title } = req.params;
-  res.render("job", { id, title, path: "job" });
+  Job.findOne()
+    .then((job) => {
+      console.log(id===job.id);
+      res.render("job", { id, title, path: "job" });
+    });
 });
 
 module.exports = router;

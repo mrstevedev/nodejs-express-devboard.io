@@ -1,8 +1,8 @@
 <section id="jobs">
     <div class="filter-search">
         <h1>Featured Jobs</h1>
-        <form>
-            <input class="search-field" type="text" name="search"
+        <form action="/jobs/search" method="GET">
+            <input class="search-field" type="text" name="term"
                 placeholder="Enter Job Title or Keywords [ex. Front End Developer]">
         </form>
     </div>
@@ -12,7 +12,7 @@
             <img src="/img/mindera.png" class="company-logo-img" alt="Mindera - Front-End Web Developer" />
         </div>
         <div class="job-content-right">
-            <h3><a class="job-content-title" href="/">{{ title }}</a></h3>
+            <h3><a class="job-content-title" href="/jobs/{{ id }}/{{ title }}">{{ title }}</a></h3>
             {{!-- <p>{{ description }}</p> --}}
             {{!-- <ul>
                 {{!-- <li>Budget: {{ budget }}</li> --}}
@@ -26,7 +26,7 @@
 
         </div>
             <div class="job-content-right-btn">
-                <a href="/jobs/:id" class="btn">View Job</a>
+                <a href="/jobs/{{ id }}/{{ title }}" class="btn">View Job</a>
             </div>
     </div>
     {{ else }}

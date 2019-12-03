@@ -29,12 +29,7 @@ router.get("/add", (req, res) => res.render("add", { path: "add" }));
 // Add a job when form submits to /add
 router.post("/add", (req, res) => {
   // From the request body of the post a job form
-  let {
-    title,
-    company,
-    description,
-    about_company
-  } = req.body;
+  let { title, company, description, about_company } = req.body;
   let errors = [];
 
   // Validate fields
@@ -59,23 +54,22 @@ router.post("/add", (req, res) => {
       company,
       description,
       about_company,
-      path: 'add'
+      path: "add"
     });
   } else {
+    technologies = technologies.toLowerCase().replace(/, /g, ",");
 
-    technologies = technologies.toLowerCase().replace(/, /g, ',');
-    
     // Insert Into Table
     Job.create({
-        title,
-        technologies,
-        budget,
-        company,
-        description,
-        about_company
+      title,
+      technologies,
+      budget,
+      company,
+      description,
+      about_company
     })
-    .then(job => res.redirect('/jobs'))
-    .catch(err => console.log(err))
+      .then(job => res.redirect("/jobs"))
+      .catch(err => console.log(err));
   }
 
   // res.redirect('/login');
@@ -88,6 +82,12 @@ router.post("/add", (req, res) => {
   //     description: 'Pellentesque in ipsum id orci porta dapibus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Sed porttitor lectus nibh.',
   //     contact_email: 'user2@gmail.com'
   // }
+});
+
+// Get route and view for specific job clicked
+router.get("/:id/:title", (req, res) => {
+  let { id, title } = req.params;
+  res.render("job", { id, title, path: "job" });
 });
 
 module.exports = router;

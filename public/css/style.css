@@ -306,6 +306,15 @@ input[type="search"] {
   align-items: center;
 }
 
+.hero-short-no-bg {
+  height: 290px;
+  width: 100%;
+  background: #f2f2f2; 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .hero-text-container {
   width: 50rem;
   height: 100%;
@@ -520,6 +529,44 @@ label {
   font-size: 1.3rem;
   line-height: 35px;
   margin: 0;
+}
+
+.hero-short-job-content {
+  display: flex;
+  width: 100%;
+  padding: 7rem 17rem;
+  height: 100%;
+}
+
+.job-content-logo {
+  width: 9rem;
+  height: 9rem;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px #e4e4e4;
+  border-radius: 4px;
+  margin: 0 2rem;
+}
+
+.apply-now-btn {
+  background: #568c9b;
+  border: none;
+  width: 24rem;
+  margin: 1rem 0;
+  padding: .8rem 6rem;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.hero-short-job-content img {
+  width: 70px;
+}
+
+.job-content-description {
+  padding: 3rem 18rem;
+  overflow: hidden;
 }
 
 /* Footer */

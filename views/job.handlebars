@@ -1,12 +1,28 @@
-<div class="hero-short" data-aos="fade" data-aos-delay="850">
-    <section id="job-content-header">
-        <div class="container">
+<div class="hero-short-no-bg">
+    <section class="hero-short-job-content">
+        <div class="job-content-logo">
+            <img src="/img/mindera.png" alt={{company}}>
+        </div>
+        <div class="job-content-about">
             <h3>{{title}}</h3>
             <h4>About the Employer</h4>
-            <p>{{ company }}</p>
+            <p><i class="fas fa-building"></i> {{ company }}</p>
         </div>
     </section>
 </div>
 <section>
-    <h4>Job Description</h4>
+    <div class="container">
+        <div class="job-content-wrap">
+            <div class="job-content-description">
+                <h4>Job Description</h4>
+                {{{description}}}
+                <div class="job-content-description-right">
+                    <div class="job-content-description-right-apply">
+                        <a target="_blank" href="https://apply.workable.com/minderacraft/j/D6950E5C31/" class="apply-now-btn">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="job-content-description-right-job-summary"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>

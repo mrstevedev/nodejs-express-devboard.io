@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
     .catch(err => console.log(err));
 });
 
-// Remote
+// Remote Route
 router.get("/remote", (req, res) => {
   res.render("remote", { path: "remote" });
 });

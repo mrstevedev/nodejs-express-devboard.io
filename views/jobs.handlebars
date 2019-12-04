@@ -20,14 +20,14 @@
             {{!-- </ul> --}}
             <div class="description-text">
                 <small><i class="fas fa-building"></i> <span class="description-text-item">{{ company }} </span> <i
-                        class="fas fa-clock"></i> <span class="description-text-item">Posted {{ createdAt }}</span> <i
+                        class="fas fa-clock"></i> <span class="description-text-item">Posted {{ fromNow createdAt }}</span> <i
                         class="fas fa-tag"></i> <span class="description-text-item"> {{{ technologies }}}</span></small>
             </div>
 
         </div>
-            <div class="job-content-right-btn">
-                <a href="/jobs/{{ id }}/{{ title }}" class="btn">View Job</a>
-            </div>
+        <div class="job-content-right-btn">
+            <a href="/jobs/{{ id }}/{{ title }}" class="btn">View Job</a>
+        </div>
     </div>
     {{ else }}
     <p>No Jobs Available. Please check back later.</p>

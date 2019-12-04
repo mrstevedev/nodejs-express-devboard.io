@@ -262,7 +262,7 @@ input[type="search"] {
 }
 
 .job-content-right h3 {
-  margin: 0 0 .4rem;
+  margin: 0 0 0.4rem;
 }
 
 .job-content-title {
@@ -812,6 +812,24 @@ input[type="checkbox"]:checked + label:before {
     flex-direction: column;
   }
 
+  .filter-search {
+    display: initial;
+  }
+
+  .filter-search h1 {
+    padding: 1rem 1rem 1rem 2rem;
+  }
+
+  .filter-search h1:after {
+    display: none;
+  }
+
+  .filter-search .search-field {
+    text-indent: 36px;
+    font-size: 1rem;
+    padding: 2rem 0rem 2rem 0rem;
+  }
+
   input[type="search"] {
     flex-basis: 0;
   }
@@ -859,14 +877,14 @@ input[type="checkbox"]:checked + label:before {
   }
   .footer-content {
     display: initial;
-}
+  }
   .footer-column-navigation {
     display: none;
   }
   .footer-column-ad img {
     width: 100%;
     padding: initial;
-}
+  }
   .footer-column-job-alerts {
     width: initial;
   }

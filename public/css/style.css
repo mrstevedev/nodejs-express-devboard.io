@@ -118,13 +118,14 @@ header.inner {
 /* Buttons */
 .btn {
   color: #4e4c4c;
-  padding: 0.6rem 2.3rem;
+  padding: 0.6rem 4.3rem;
   border: 1px solid #ececec;
   font-size: 0.7rem;
   text-transform: uppercase;
   font-weight: bold;
   border-radius: 0.2rem;
   background: #ececec;
+  display: inline-block;
 }
 
 .btn:hover {
@@ -260,8 +261,18 @@ input[type="search"] {
   width: 71rem;
 }
 
+.job-content-right h3 {
+  margin: 0 0 .4rem;
+}
+
 .job-content-title {
   color: #333;
+}
+
+.job-content-right-btn {
+  width: 23%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .description-text {
@@ -309,7 +320,7 @@ input[type="search"] {
 .hero-short-no-bg {
   height: 290px;
   width: 100%;
-  background: #f2f2f2; 
+  background: #f2f2f2;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -449,11 +460,6 @@ input[type="search"] {
   opacity: 1;
 }
 
-.fas.fa-long-arrow-alt-right {
-  opacity: 0;
-  transition: 0.22s ease-in-out;
-}
-
 .form-group button[type="submit"]:hover .fas.fa-long-arrow-alt-right {
   opacity: 1;
 }
@@ -534,7 +540,7 @@ label {
 .hero-short-job-content {
   display: flex;
   width: 100%;
-  padding: 7rem 17rem;
+  padding: 7rem 12rem;
   height: 100%;
 }
 
@@ -550,23 +556,44 @@ label {
   margin: 0 2rem;
 }
 
+.job-content-about h4,
+.job-content-about p {
+  margin: 8px 0;
+}
+
+.job-content-wrap {
+  padding: 3rem 2rem;
+  overflow: hidden;
+  display: flex;
+  margin: 0 auto;
+  width: 1390px;
+}
+
+.job-content-description {
+  display: flex;
+  width: 54rem;
+  flex-direction: column;
+  margin: 0 3rem;
+}
+
 .apply-now-btn {
   background: #568c9b;
   border: none;
-  width: 24rem;
   margin: 1rem 0;
-  padding: .8rem 6rem;
+  padding: 0.8rem 3rem;
   border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  width: 24rem;
+  text-align: center;
+}
+
+.apply-now-btn:hover {
   color: #fff;
 }
 
 .hero-short-job-content img {
   width: 70px;
-}
-
-.job-content-description {
-  padding: 3rem 18rem;
-  overflow: hidden;
 }
 
 /* Footer */
@@ -633,17 +660,17 @@ footer p {
 .footer-column-job-alerts input[type="email"] {
   background: #0c0c0c;
   border: none;
-  width: 16rem;
-  height: 2.9rem;
+  width: 100%;
+  height: 2.8rem;
   text-indent: 1rem;
   color: #969696;
   outline: none;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   font-size: 1rem;
 }
 
 .footer-column-job-alerts {
-  width: 47rem;
+  width: 25rem;
 }
 
 .footer-column-job-alerts p {
@@ -660,6 +687,7 @@ footer p {
   cursor: pointer;
   position: absolute;
   top: 0px;
+  right: 0;
 }
 
 /* Job Alerts */
@@ -801,9 +829,46 @@ input[type="checkbox"]:checked + label:before {
     width: 100%;
   }
 
+  .job {
+    display: block;
+  }
+
   .job-content-right {
     padding: 0rem;
     width: 100%;
+  }
+  .job-content-wrap {
+    display: initial;
+  }
+  .hero-short-job-content {
+    padding: 7rem 3rem;
+  }
+  .job-content-description {
+    width: initial;
+  }
+  .job-content-right-btn {
+    width: 100%;
+    display: initial;
+  }
+  .description-text {
+    line-height: 26px;
+  }
+  footer {
+    height: initial;
+    padding: 2rem 2rem 7rem;
+  }
+  .footer-content {
+    display: initial;
+}
+  .footer-column-navigation {
+    display: none;
+  }
+  .footer-column-ad img {
+    width: 100%;
+    padding: initial;
+}
+  .footer-column-job-alerts {
+    width: initial;
   }
 }
 

@@ -825,7 +825,7 @@ input[type="checkbox"]:checked + label:before {
   }
 
   .filter-search .search-field {
-    text-indent: 36px;
+    text-indent: 34px;
     font-size: 1rem;
     padding: 2rem 0rem 2rem 0rem;
   }
@@ -849,6 +849,7 @@ input[type="checkbox"]:checked + label:before {
 
   .job {
     display: block;
+    padding: 6em 1.5em 6rem;
   }
 
   .job-content-right {
@@ -859,10 +860,11 @@ input[type="checkbox"]:checked + label:before {
     display: initial;
   }
   .hero-short-job-content {
-    padding: 7rem 3rem;
+    padding: 7rem 0rem;
   }
   .job-content-description {
     width: initial;
+    margin: 0 1rem;
   }
   .job-content-right-btn {
     width: 100%;
@@ -887,6 +889,14 @@ input[type="checkbox"]:checked + label:before {
   }
   .footer-column-job-alerts {
     width: initial;
+  }
+  .about-content {
+    padding: 1rem 2rem 7rem;
+    width: initial;
+    margin: 0;
+  }
+  .company-logo {
+    display: none;
   }
 }
 

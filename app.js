@@ -55,6 +55,8 @@ app.use("/register", require("./routes/register"));
 // Login Route
 app.use("/login", require("./routes/login"));
 
+app.use('/send', require('./routes/send'));
+
 const PORT = process.env.PORT || 5001;
 
 app.listen(PORT, () => console.log(`Server started on ${PORT}`));

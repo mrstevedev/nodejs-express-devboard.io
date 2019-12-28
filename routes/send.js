@@ -3,6 +3,7 @@ app = express();
 const router = express.Router();
 const exphbs = require("express-handlebars");
 const mailer = require('express-mailer');
+const env = require('dotenv').config();
 
 app.engine("handlebars", exphbs({
       defaultLayout: "email"
@@ -11,14 +12,14 @@ app.engine("handlebars", exphbs({
   app.set("view engine", "handlebars");
 
 mailer.extend(app, {
-    from: 'no-reply@example.com',
+    from: '<no-replay@devboard.io>',
     host: 'smtp.gmail.com',
     secureConnection: true,
     port: 465,
     transportMethod: 'SMTP',
     auth: {
-        user: user,
-        pass: pass
+        user: process.env.user,
+        pass: process.env.pass
     }
 });
 
@@ -27,16 +28,15 @@ router.get('/', (req, res) => {
 
     let { email, email_frequency } = req.query;
 
-    app.mailer.send('email', {
+    app.mailer.send('layouts/email', {
         to: 'stevendotpulido@gmail.com',
         subject: 'Password reset', // REQUIRED. 
-        body: 'Email body',
-        otherProperty: 'Other Property'
+        body: 'Your Password is set to xxxxx. Please log in back.,'
     }, function(err) {
         if (err) {
     
             console.log(err);
-            res.send('There was an error sending the email');
+            // res.send('There was an error sending the email');
 
             return;
         }

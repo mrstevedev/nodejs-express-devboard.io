@@ -12,7 +12,7 @@ app.engine("handlebars", exphbs({
   app.set("view engine", "handlebars");
 
 mailer.extend(app, {
-    from: '<no-replay@devboard.io>',
+    from: '<no-reply@devboard.io>',
     host: 'smtp.gmail.com',
     secureConnection: true,
     port: 465,

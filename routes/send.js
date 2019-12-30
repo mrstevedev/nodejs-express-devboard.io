@@ -12,9 +12,9 @@ app.engine("handlebars", exphbs({
   app.set("view engine", "handlebars");
 
 mailer.extend(app, {
-    from: '<no-reply@devboard.io>',
+    from: 'no-reply@devboard.io',
     host: 'smtp.gmail.com',
-    secureConnection: true,
+    secureConnection: true, 
     port: 465,
     transportMethod: 'SMTP',
     auth: {
@@ -30,8 +30,7 @@ router.get('/', (req, res) => {
 
     app.mailer.send('layouts/email', {
         to: 'stevendotpulido@gmail.com',
-        subject: 'Password reset', // REQUIRED. 
-        body: 'Your Password is set to xxxxx. Please log in back.,'
+        subject: 'DevBoard.io Job Notifications' // REQUIRED. 
     }, function(err) {
         if (err) {
     

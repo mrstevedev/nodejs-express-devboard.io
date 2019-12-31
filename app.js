@@ -55,6 +55,9 @@ app.use("/register", require("./routes/register"));
 // Login Route
 app.use("/login", require("./routes/login"));
 
+// Unsubscribe Route
+app.use('unsubscribe', require('./routes/ubsibscribe'));
+
 app.use('/send', require('./routes/send'));
 
 const PORT = process.env.PORT || 5001;

@@ -1,7 +1,7 @@
 <div class="hero-short-no-bg">
     <section class="hero-short-job-content">
         <div class="job-content-logo">
-            <img src="/img/mindera.png" alt={{company}}>
+            <img src="/img/{{id}}.{{company_logo_ext}}" alt={{company}}>
         </div>
         <div class="job-content-about">
             <h3>{{title}}</h3>
@@ -23,7 +23,21 @@
                     <a target="_blank" href="https://apply.workable.com/minderacraft/j/D6950E5C31/"
                         class="apply-now-btn"><span>Apply Now  <i class="fas fa-long-arrow-alt-right"></i></span></a>
                 </div>
-                <div class="job-content-description-right-job-summary"></div>
+                <div class="job-content-description-right-job-summary">
+                    <div class="job-content-description-right-job-summary-title">
+                        <h3>Job Summary</h3>
+                    </div>
+                    <div class="job-content-description-right-job-summary-content">
+                        <div class="job-content-description-right-job-summary-posted">
+                            <h4>Date Posted</h4>
+                            {{fromNow createdAt}}
+                        </div>
+                        <div class="job-content-description-right-job-summary-tags">
+                            <h4><i class="fas fa-tag" aria-hidden="true"></i> Tags</h4>
+                            {{{tags}}}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

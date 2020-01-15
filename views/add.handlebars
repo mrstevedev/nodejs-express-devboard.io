@@ -10,6 +10,7 @@
         <form action="/jobs/add" method="POST">
             <label for="jobtitle">Job Title <input type="text" id="title" name="title" placeholder="[ex. Front-End Developer, Senior Full Stack Developer]" value="{{title}}"></label>
             <label for="company">Company <input type="text" id="company" name="company" placeholder="[ex. Mindera]" value="{{company}}"></label>
+            <label for="technologies">Technologies <input type="text" id="technologies" name="technologies" placeholder="[ex. HTML5, CSS3, Javascript]" value="{{company}}"></label>
             <label for="description">Job Description <textarea id="description" name="description" placeholder="[Add Description]" value={{ description }}></textarea></label>
             <label for="about">About Employer <textarea id="about_company" name="about_company" placeholder="[Add About Employer]">{{ about_company }}</textarea>
             <label for="company_logo">Company Logo <input type="file" id="company_logo" name="company_logo"></label>

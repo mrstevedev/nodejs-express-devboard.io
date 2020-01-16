@@ -4,6 +4,7 @@ const router = express.Router();
 const exphbs = require("express-handlebars");
 const mailer = require('express-mailer');
 const env = require('dotenv').config();
+const Email = require('../models/Email');
 
 app.engine("handlebars", exphbs({
       defaultLayout: "email"
@@ -30,7 +31,9 @@ router.get('/', (req, res) => {
 
     app.mailer.send('layouts/email', {
         to: 'stevendotpulido@gmail.com',
-        subject: 'DevBoard.io Job Notifications' // REQUIRED. 
+        subject: 'DevBoard.io Job Notifications', // REQUIRED. 
+        email: email,
+        frequency: email_frequency
     }, function(err) {
         if (err) {
     
@@ -42,9 +45,15 @@ router.get('/', (req, res) => {
         console.log('mail sent');
     });
 
+     // insert email to db
+     Email.create({
+        emails: email
+      })
+        .catch(err => console.log(err));
+
     res.render('send', { email, email_frequency, path: 'send', } );
 
-    // insert email to db
+
 });
 
 

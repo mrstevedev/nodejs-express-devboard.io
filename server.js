@@ -48,6 +48,9 @@ app.get("/", (req, res, next) => {
 // About Route
 app.use("/about", require("./routes/about"));
 
+// Login Route
+app.use('/login', require('./routes/login'));
+
 // Jobs Route
 app.use("/jobs", require("./routes/jobs"));
 

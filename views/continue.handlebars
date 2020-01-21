@@ -1,0 +1,17 @@
+{{>hero-short}}
+<section id="add">
+    <div class="form-group login">
+        <div class="notification" data-aos="fade-in" data-aos-delay="450">
+          <div class="notification-close">
+            <i class="fas fa-times"></i>
+          </div>
+          <p>Please enter the one-time use PIN we sent you on your email</p>
+        </div>
+        <form action="/login/continue" method="POST">
+            <label for="jobtitle"><i class="far fa-envelope"></i><input type="text" id="jobtitle" name="email" placeholder="Email Address" required></label>
+            <label for="password"><i class="fas fa-lock"></i><input type="password" id="jobtitle" name="password" placeholder="Password" required></label>
+            <button type="submit">Continue<i class="fas fa-long-arrow-alt-right"></i>
+            </button>
+        </form>
+    </div>
+</section>

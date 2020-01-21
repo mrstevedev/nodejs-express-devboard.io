@@ -1,1 +1,1 @@
-console.log('send.js ran');
+// Get query string paramaters here

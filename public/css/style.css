@@ -1016,6 +1016,7 @@ input[type="checkbox"]:checked + label:before {
   margin: 1rem 0;
   padding: 1rem 2rem;
   position: relative;
+  border-radius: 2px;
 }
 
 .notification-close {
@@ -1050,4 +1051,30 @@ input[type="checkbox"]:checked + label:before {
     width:0;
     height: 100%;
     opacity: 0;
+}
+
+.button.button-sliding-icon {
+  padding-left: 20px;
+}
+
+.button-sliding-icon i {
+  opacity: 0;
+  max-width: 0;
+  transition: 0.25s;
+  display: inline-block;
+  transform: translateX(-20px);
+}
+
+.button.button-sliding-icon:hover {
+  padding-right: 20px;
+}
+
+.button.button-sliding-icon:hover i {
+  max-width: 20px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.button i {
+  margin-left: 5px;
 }

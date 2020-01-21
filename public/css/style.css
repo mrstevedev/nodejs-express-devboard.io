@@ -18,6 +18,10 @@ body {
   background: #f7f7f7;
 }
 
+h4 {
+  margin: .3rem 0;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -299,6 +303,10 @@ input[type="search"] {
   color: #7d7d7d;
 }
 
+.job-content-description-right-job-summary-content > div {
+  margin: 1rem 0 1.8rem 0;
+}
+
 /* Hero */
 .hero {
   height: 500px;
@@ -388,13 +396,13 @@ input[type="search"] {
 
 /* Form */
 .form-group {
-  width: 37rem;
+  width: 38rem;
   margin: 0 auto;
   padding: 4rem 1rem;
 }
 
 .form-group label {
-  margin: 1rem 0;
+  /* margin: 0rem 0; */
   font-weight: bold;
   color: #444;
   font-size: 0.6rem;
@@ -402,17 +410,22 @@ input[type="search"] {
   position: relative;
 }
 
-.form-group .far.fa-envelope {
+.form-group .far.fa-envelope, 
+.form-group .fas.fa-lock {
   position: absolute;
   left: 1rem;
-  top: 1.9rem;
+  top: .9rem;
+  border-right: solid 1px;
+  padding: 0 .5rem;
 }
 
-.form-group input[type="text"] {
+.form-group input[type="text"], 
+.form-group input[type="password"],
+.form-group textarea {
   width: 100%;
   height: 2.3rem;
   border: none;
-  margin: 1rem 0 0 0;
+  margin: 0rem 0 .4rem 0;
   outline: none;
   font-weight: bold;
   border-radius: 2px;
@@ -426,17 +439,23 @@ input[type="search"] {
   line-height: 1.4;
 }
 
-.form-group.login input[type="text"] {
-  text-indent: 3rem;
+.form-group.login input[type="text"], 
+.form-group.login input[type="password"] {
+  text-indent: 3.2rem;
+}
+
+.form-group.register input[type="text"],
+.form-group.register textarea {
+  margin: .4rem 0;
 }
 
 .form-group textarea {
   width: 100%;
   height: 9.3rem;
   border: none;
-  margin: 1rem 0;
+  margin: 0rem 0;
   outline: none;
-  padding: 1rem;
+  padding: .5rem 0 0 0;
   color: #717171;
   font-weight: bold;
 }
@@ -530,14 +549,20 @@ label {
 .about-content {
   padding: 4rem;
   width: 54rem;
-  margin: 6rem auto;
+  margin: 4rem auto;
 }
 
-.about-content h4 {
+.login {
+  margin: 4rem auto;
+}
+
+.about-content h4, 
+.login h4 {
   font-size: 2rem;
   margin: 0.5rem 0;
 }
-.about-content p {
+.about-content p, 
+.login p {
   font-size: 1.4rem;
   line-height: 35px;
   margin: 0;
@@ -983,4 +1008,46 @@ input[type="checkbox"]:checked + label:before {
 
 .strong {
   text-decoration: underline;
+}
+
+.notification {
+  background: #EBF6E0;
+  color: #5f9025;
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.notification-close {
+  position: absolute;
+  right: .6rem;
+  top:.6rem;
+  font-size: .8rem;
+  cursor: pointer;
+}
+
+.notification p {
+  font-size: 1rem;
+}
+
+.file-upload__label {
+  display: block;
+  padding: 1.4em 2em;
+  color: #fff!important;
+  background: #2e2e2e;
+  border-radius: 2px;
+  transition: background .3s;
+  cursor: pointer;
+}
+    
+.file-upload__input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 1;
+    width:0;
+    height: 100%;
+    opacity: 0;
 }

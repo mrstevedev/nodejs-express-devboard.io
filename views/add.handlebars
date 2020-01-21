@@ -1,6 +1,6 @@
 {{> hero-short}}
 <section id="add">
-    <div class="form-group">
+    <div class="form-group register">
         <h4>Post a job</h4>
         {{#each errors}}
             <div class="error">
@@ -13,8 +13,18 @@
             <label for="technologies">Technologies <input type="text" id="technologies" name="technologies" placeholder="[ex. HTML5, CSS3, Javascript]" value="{{company}}"></label>
             <label for="description">Job Description <textarea id="description" name="description" placeholder="[Add Description]" value={{ description }}></textarea></label>
             <label for="about">About Employer <textarea id="about_company" name="about_company" placeholder="[Add About Employer]">{{ about_company }}</textarea>
-            <label for="company_logo">Company Logo <input type="file" id="company_logo" name="company_logo"></label>
+            <label class="file-upload__label" for="company_logo"><i class="fas fa-file-upload"></i> Upload Company Logo</label> <input class="file-upload__input" type="file" id="company_logo" name="company_logo">
             <button type="submit">Submit</button>
         </form>
     </div>
 </section>
+
+<script>
+  const uploadInput = document.getElementById('company_logo').addEventListener('change', (e) => {
+  console.log('onChange');
+  const inputVal = e.target.value;
+  const label = document.querySelector('.file-upload__label');
+  label.innerHTML = event.target.value.split('\\').pop();
+});
+
+</script>

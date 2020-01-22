@@ -25,6 +25,11 @@ router.get("/remote", (req, res) => {
   res.render("remote", { path: "remote" });
 });
 
+// Display Success Route
+router.get('/success', (req, res) => {
+  res.render('success', { path: 'success' });
+});
+
 // Display Post Job Form
 router.get("/add", (req, res) => {
   res.render("add", { path: "add" });
@@ -71,7 +76,6 @@ router.post("/add", (req, res) => {
     Job.create({
       title,
       technologies,
-      budget,
       company,
       description,
       about_company
